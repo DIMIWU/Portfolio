@@ -1,0 +1,576 @@
+.container{
+	margin-top:90px;
+			/*display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			"cover"
+			"intro";
+*/
+		}
+/*element*/
+.line1{
+	grid-area: line1;
+	border: 0.1px solid rgba(0,0,0,0.25);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.line2{
+	grid-area: line2;
+	border: 0.1px solid rgba(0,0,0,0.25);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.line3{
+	grid-area: line3;
+	border: 0.1px solid rgba(0,0,0,0.25);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.line-d{
+	grid-area: line-d;
+	border: 0.01px solid rgba(0,0,0,0.25);
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+
+/*Cover*/
+.cover{
+	/*height: 100vh;*/
+	
+	grid-area: cover;
+	/*grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-areas: 
+			"logo . . ."
+			"photoimage photoimage photoimage photoimage"
+			". hi hi ."
+			". socialmedia socialmedia .";*/
+
+
+		}
+.logo{
+	grid-area: logo;
+	
+
+}
+.name{
+	grid-area: name;
+}
+.position{
+	grid-area: position;
+	margin-top: 3vw;
+	margin-left: 3vw;
+}
+.photo{
+	
+	grid-area:photo;
+	text-align: center;
+	
+}
+.photoimage{
+	width:30vw;
+	min-width:300px; 
+	margin-top:0vw;
+	grid-area:photoimage;
+	text-align: center;
+	border: 3px red;
+	border-radius: 90%; 
+}
+.hi{
+	grid-area:hi;
+	text-align: center;
+}
+
+.animationtyping{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing{
+
+	width: 20.5ch;
+ 	animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+	white-space: nowrap;
+ 	overflow: hidden;
+  	border-right: 3px solid;
+ 	/*font-family: monospace;*/
+ 	font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+
+
+
+
+.socialmediaicon1{
+	grid-area:socialmediaicon;
+	text-align: center;
+	margin-bottom: 10vw;
+}
+.socialmediaicon1 svg:hover{
+	fill: orange;
+}
+.icon{
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/*Introduction*/
+.intro{
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 900px;
+	line-height: 150%;
+	display: grid;
+	grid-area:intro;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: 
+	 	"line1   line1   line1"
+        "h1    content1    content1"
+        "line2   line2   line2"
+        "h2   content2   content2"
+        "line3   line3   line3"
+        "h3    content3    content3";
+}
+
+.h1{
+	grid-area:h1;
+	align-self:left;
+	width: 30%
+	float:left;
+}
+.content1{
+	grid-area:content1;
+	align-self:left;
+	width: 70%
+	float:left;
+}
+
+
+.quote{
+	margin-top:2rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+}
+
+.quotecontent{
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.author{
+	float:right;
+	font-weight: 700;
+
+}
+
+
+
+
+
+
+
+.h2{
+	grid-area:h2;
+	align-self:left;
+}
+.sub2{
+	grid-area:sub2;
+	align-self:left;
+}
+.content2{
+	grid-area:content2;
+	align-self:left;
+}
+
+
+
+/*Education Experiences*/
+
+.education1{
+	display: grid;
+			grid-template-columns: 2fr;
+			grid-template-areas: 
+			"school date"
+			"degree degree"
+			"gpa gpa";
+}
+
+.school{
+	font-weight: bold;
+	grid-area:school;
+
+}
+
+.degree{
+	grid-area:degree;
+
+}
+
+.gpa{
+	grid-area:gpa;
+	font-weight: 400;
+
+}
+
+.date{
+	grid-area:date;
+	font-style:italic; 
+
+}
+
+.education2{
+	padding-top: 20px;
+	display: grid;
+			grid-template-columns: 2fr;
+			grid-template-areas: 
+			"school date"
+			"degree degree"
+			"gpa gpa"
+			"awards awards";
+}
+
+.awards{
+	grid-area:awards;
+	font-style:italic;
+	font-weight: 400;
+}
+
+
+.education3{
+	padding-top: 20px;
+	display: grid;
+			grid-template-columns: 2fr;
+			grid-template-areas: 
+			"school date"
+			"degree degree"
+			"awards awards";
+}
+
+
+.freelancer{
+	/*padding-top: 20px;*/
+	display: grid;
+	grid-template-columns: 2fr;
+	grid-template-areas: 
+			"program date-d"
+			"location location"
+			"position-d position-d"
+			"detail-list detail-list";
+}
+
+.program{
+	font-weight: bold;
+	grid-area:program;
+
+}
+
+.position-d{
+	grid-area:position-d;
+	text-decoration: underline;
+
+}
+.date-d{
+	grid-area:date-d;
+	font-style:italic;
+
+}
+
+.location{
+	grid-area:location;
+	font-style: italic;
+	font-weight: 500;
+
+}
+
+.detail-list{
+	grid-area: detail-list;
+}
+
+
+
+.detail-list ul{
+	margin-top: 0px;
+    margin-bottom: 0px;
+	list-style-type: square;
+	padding-left: 20px;
+
+}
+
+
+.intern{
+	/*padding-top: 20px;*/
+	display: grid;
+	grid-template-columns: 2fr;
+	grid-template-areas: 
+			"program date-d"
+			"location location"
+			"position-d position-d"
+			"detail-list detail-list";
+}
+
+
+.computerskills{
+	display: grid;
+	/*grid-template-columns: 180px 180px 180px;*/
+	grid-template-areas: 
+			"figma sketch xd"
+			"ai ps indesign"
+			"ae principle .";
+}
+
+ul{
+	list-style-type: square;
+}
+
+.figma{
+	grid-area: figma;
+}
+
+.sketchj{
+	grid-area: sketch;
+}
+.xd{
+	grid-area: xd;
+}
+.ai{
+	grid-area: ai;
+}
+.ps{
+	grid-area: ps;
+}
+.indesign{
+	grid-area: indesign;
+}
+.ae{
+	grid-area: ae;
+}
+.principle{
+	grid-area: principle;
+}
+
+
+
+.h3{
+	grid-area:h3;
+	align-self:left;
+}
+.content3{
+	grid-area:content3;
+	align-self:left;
+}
+
+
+.interested{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 2rem;
+	color: black; 
+	font-family: 'Original Surfer', cursive;
+
+}
+.email{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 481px) {
+	.container{
+    margin-top: 67px;
+	}
+
+	.typing {
+    font-size: 1.5em;
+	}
+
+	h3{
+	font-size: 1rem;
+	}
+
+	.intro{
+
+	margin:0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 900px;
+	display: grid;
+	grid-template-columns:1fr;
+	grid-template-areas: 
+	 	"line1"
+        "h1"
+        "content1"
+        "line2"
+        "h2"
+        "sub2"
+        "content2"
+        "line3"
+        "h3"
+        "content3";
+}
+
+
+
+
+
+/*Education Experiences*/
+
+.education1{
+	display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			"school"
+			"date"
+			"degree"
+			"gpa";
+}
+
+
+.education2{
+	padding-top: 20px;
+	display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			"school"
+			"date"
+			"degree"
+			"gpa"
+			"awards";
+}
+
+
+.education3{
+	padding-top: 20px;
+	display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			"school"
+			"date"
+			"degree"
+			"awards";
+}
+
+
+.freelancer{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+			"program"
+			"date-d"
+			"location"
+			"position-d"
+			"detail-list";
+}
+
+
+.intern{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+			"program"
+			"date-d"
+			"location"
+			"position-d"
+			"detail-list";
+}
+
+
+.computerskills{
+	display: grid;
+	/*grid-template-columns: 180px 180px 180px;*/
+	grid-template-areas: 
+			"figma sketch"
+			" xd ai"
+			" ps indesign"
+			"ae principle";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-device-width : 482px) and (max-device-width : 961px) {
+
+.intro{
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
