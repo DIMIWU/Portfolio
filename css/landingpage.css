@@ -524,11 +524,16 @@ ul{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas: 
-			"program"
-			"date-d"
-			"location"
-			"position-d"
-			"detail-list";
+			"program1"
+			"date-d1"
+			"location1"
+			"position-d1"
+			"detail-list1"
+			"program2"
+			"date-d2"
+			"location2"
+			"position-d2"
+			"detail-list2";
 }
 
 
