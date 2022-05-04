@@ -283,38 +283,72 @@ a {
 	display: grid;
 	grid-template-columns: 2fr;
 	grid-template-areas: 
-			"program date-d"
-			"location location"
-			"position-d position-d"
-			"detail-list detail-list";
+			"program1 date-d1"
+			"location1 location1"
+			"position-d1 position-d1"
+			"detail-list1 detail-list1"
+
+            "program2 date-d2"
+			"location2 location2"
+			"position-d2 position-d2"
+			"detail-list2 detail-list2";
 }
 
-.program{
+.program1{
 	font-weight: bold;
-	grid-area:program;
+	grid-area:program1;
 
 }
 
-.position-d{
-	grid-area:position-d;
+.position-d1{
+	grid-area:position-d1;
 	text-decoration: underline;
 
 }
-.date-d{
-	grid-area:date-d;
+.date-d1{
+	grid-area:date-d1;
 	font-style:italic;
 
 }
 
-.location{
-	grid-area:location;
+.location1{
+	grid-area:location1;
 	font-style: italic;
 	font-weight: 500;
 
 }
 
-.detail-list{
-	grid-area: detail-list;
+.detail-list1{
+	grid-area: detail-list1;
+}
+
+
+.program2{
+	font-weight: bold;
+	grid-area:program2;
+
+}
+
+.position-d2{
+	grid-area:position-d2;
+	text-decoration: underline;
+
+}
+.date-d2{
+	grid-area:date-d2;
+	font-style:italic;
+
+}
+
+.location2{
+	grid-area:location2;
+	font-style: italic;
+	font-weight: 500;
+
+}
+
+.detail-list2{
+	grid-area: detail-list2;
 }
 
 

@@ -3,3 +3,19 @@
   src: url('../fonts/fengguangmingrui/webfont.woff'); 
   src: url('../fonts/fengguangmingrui.ttf'); 
   }
+
+
+@font-face {
+  font-family:'cangerxiaowanzi';
+  src: url('../fonts/cangerxiaowanzi/cangerxiaowanzi.woff'); 
+  }
+
+@font-face {
+  font-family:'guanheiti';
+  src: url('../fonts/guanheiti/guanheiti.woff'); 
+  }
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
