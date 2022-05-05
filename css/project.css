@@ -142,12 +142,19 @@
 
 
 
+h2{
+    line-height: 180%;
+}
+p{
+    line-height: 150%
+}
 
 
 
 
 
 
+/*Mobile*/
 
 @media only screen and (min-device-width : 0px) and (max-device-width : 481px) {
 
@@ -168,19 +175,29 @@
 	
 }
 
+
+    
+    
 .grid-container-kga {
   display: grid;
   grid-template-areas:
-    'how why what';
+    'how'
+    'why'
+    'what';
 
-  gap:30px;
-
-  padding: 10px;
 }
 
 
 .section{
-	margin-bottom: 60px;
+	margin-bottom: 30px;
+}
+
+  
+h2{
+    line-height: 150%;
+}
+p{
+    line-height: 130%
 }
 
 
@@ -188,7 +205,7 @@
 
 
 
-
+/*Tablet*/
 
 @media only screen and (min-device-width : 482px) and (max-device-width : 961px) {
 
@@ -208,15 +225,23 @@
 .grid-container-kga {
   display: grid;
   grid-template-areas:
-    'how'
-    'why'
-    'what';
+    'how why what';
 
+  gap:30px;
+
+  padding: 10px;
 }
 
 
 .section{
-	margin-bottom:30px;
+	margin-bottom:60px;
+}
+    
+h2{
+    line-height: 180%;
+}
+p{
+    line-height: 150%
 }
 
 	
