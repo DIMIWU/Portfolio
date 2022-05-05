@@ -142,7 +142,7 @@
 
 
 
-h2{
+.section h2{
     line-height: 180%;
 }
 p{
@@ -193,7 +193,7 @@ p{
 }
 
   
-h2{
+.section h2{
     line-height: 150%;
 }
 p{
@@ -237,11 +237,12 @@ p{
 	margin-bottom:60px;
 }
     
-h2{
+.section h2{
     line-height: 180%;
 }
 p{
     line-height: 150%
+
 }
 
 	
