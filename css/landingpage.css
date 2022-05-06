@@ -321,7 +321,15 @@ a {
 
 .detail-list1{
 	grid-area: detail-list1;
+	margin-bottom: 20px;
 }
+
+
+
+
+
+
+
 
 
 .program2{
@@ -354,6 +362,46 @@ a {
 
 
 
+
+
+
+
+
+.program3{
+	font-weight: bold;
+	grid-area:program3;
+
+}
+
+.position-d3{
+	grid-area:position-d3;
+	text-decoration: underline;
+
+}
+.date-d3{
+	grid-area:date-d3;
+	font-style:italic;
+
+}
+
+.location3{
+	grid-area:location3;
+	font-style: italic;
+	font-weight: 500;
+
+}
+
+.detail-list3{
+	grid-area: detail-list3;
+}
+
+
+
+
+
+
+
+
 .detail-list ul{
 	margin-top: 0px;
     margin-bottom: 0px;
@@ -368,11 +416,14 @@ a {
 	display: grid;
 	grid-template-columns: 2fr;
 	grid-template-areas: 
-			"program date-d"
-			"location location"
-			"position-d position-d"
-			"detail-list detail-list";
+			"program3 date-d3"
+			"location3 location3"
+			"position-d3 position-d3"
+			"detail-list3 detail-list3";
 }
+
+
+
 
 
 .computerskills{
@@ -432,6 +483,7 @@ ul{
 	font-size: 2rem;
 	color: black; 
 	font-family: 'Original Surfer', cursive;
+	line-height: initial;
 
 }
 .email{
@@ -542,11 +594,11 @@ ul{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas: 
-			"program"
-			"date-d"
-			"location"
-			"position-d"
-			"detail-list";
+			"program3"
+			"date-d3"
+			"location3"
+			"position-d3"
+			"detail-list3";
 }
 
 
@@ -558,6 +610,13 @@ ul{
 			" xd ai"
 			" ps indesign"
 			"ae principle";
+}
+
+
+.interested{
+
+	line-height: initial;
+
 }
 
 
