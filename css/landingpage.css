@@ -70,7 +70,8 @@
 }
 .photoimage{
 	width:30vw;
-	min-width:300px; 
+	min-width:300px;
+	max-width: 450px;
 	margin-top:0vw;
 	grid-area:photoimage;
 	text-align: center;
