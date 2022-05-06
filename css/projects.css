@@ -113,6 +113,7 @@ img{
 	display: grid;
     row-gap: 10px;
 	grid-template-columns:1fr;
+	grid-template-rows: max(400px);
 	grid-template-areas: 
 	 	"project1"   
 	 	"project2"
@@ -226,6 +227,7 @@ img{
 	column-gap: 2vw;
     row-gap:10px;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: max(400px);
 	grid-template-areas: 
 	 	"project1   project2"
 	 	"project3   project4"
