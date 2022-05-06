@@ -7,6 +7,7 @@
 	margin-top: 20vh;
 	display: grid;
 	column-gap: 2vw;
+	grid-template-rows:max(500px)max(500px)max(500px)max(500px)max(500px);
     row-gap:10px;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas: 
@@ -42,6 +43,7 @@
 
 img{
 	height: 30vw;
+	max-height: 450px;
 	width: 100%;
 	/*object-fit: fill;*/
 	object-fit: cover;
