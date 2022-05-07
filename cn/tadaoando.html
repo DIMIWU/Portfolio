@@ -113,7 +113,7 @@
 					<h2>Display</h2>
 					<p>网站结合安藤忠雄在建筑上对光的设计，设计了安藤忠雄的“生平”、“建筑风格”和“Quote”。</p>
 					<div>
-						<img src="../images/tadaoando/tadaoando.gif">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/tadaoando/tadaoando.gif">
 					</div>
 					
 				</div>
@@ -123,7 +123,7 @@
 					<h2>Responsive Design</h2>
 					<p>响应式设计，适用于桌面、平板和手机。</p>
 					<div>
-						<img src="../images/tadaoando/responsive.jpg">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/tadaoando/responsive.jpg">
 					</div>
 				</div>
 
@@ -163,3 +163,48 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === '../images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="../javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
+
+
+
+
+
+
+
+
+

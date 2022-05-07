@@ -104,8 +104,8 @@
 
 				<div class="section">
 					<h2>Display</h2>
-					<img src="../images/tangle/6.jpg">
-					<img src="../images/tangle/7.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="../images/tangle/6.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="../images/tangle/7.jpg">
 				</div>			
 				
 			</div>
@@ -142,3 +142,41 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === '../images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="../javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>

@@ -104,7 +104,7 @@
 
 			<div class="project" id="project1">
 				<a href="kgawebdesign.html">
-				<img src="img/loading.gif" data-src="images/kganyc/cover.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/kganyc/cover.jpg">
 				<h4>Kossar + Garry Architects Website</h4>
 				</a>
 				<p>Web Design</p>
@@ -113,7 +113,7 @@
 
 			<div class="project" id="project2">
 				<a href="youjiangketang.html">
-				<img src="img/loading.gif" data-src="images/youjiangketang/cover.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/youjiangketang/cover.jpg">
 				<h4>有讲课堂</h4>
 				</a>
 				<p>App Design</p>
@@ -133,7 +133,7 @@
 
 			<div class="project" id="project3">
 				<a href="bee.html">
-				<img src="img/loading.gif" data-src="images/beeanimation/logo.gif">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/beeanimation/logo.gif">
 				<h4>Dimi</h4>
 				</a>
 				<p>Branding Design</p>
@@ -142,7 +142,7 @@
 
 			<div class="project" id="project4">
 				<a href="soymami.html">
-				<img src="img/loading.gif" data-src="images/soymami/1.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/soymami/1.jpg">
 				<h4>Soy Mami</h4>
 				</a>
 				<p>Branding Design</p>
@@ -156,7 +156,7 @@
 
 			<div class="project" id="project5">
 				<a href="tadaoando.html">
-				<img src="img/loading.gif" data-src="images/tadaoando/tadaoando.gif">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/tadaoando/tadaoando.gif">
 				<h4>Tadao Ando</h4>
 				</a>
 				<p>Web Design</p>
@@ -165,7 +165,7 @@
 
 			<div class="project" id="project6">
 				<a href="education.html">
-				<img src="img/loading.gif" data-src="images/education/education1.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/education/education1.jpg">
 				<h4>Education</h4>
 				</a>
 				<p>Illustration</p>
@@ -178,7 +178,7 @@
 
 			<div class="project" id="project7">
 				<a href="icon.html">
-				<img src="img/loading.gif" data-src="images/icon/icon.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/icon/icon.jpg">
 				<h4>ICON</h4>
 				<p>Typograhy Design</p>
 				</a>
@@ -187,7 +187,7 @@
 
 			<div class="project" id="project8">
 				<a href="citychain.html">
-				<img src="img/loading.gif" data-src="images/citychain/sf1.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/citychain/sf1.jpg">
 				<h4>City Chain</h4>
 				<p>Typograhy Design</p>
 				</a>
@@ -201,7 +201,7 @@
 
 			<div class="project" id="project9">
 				<a href="lucy.html">
-				<img src="img/loading.gif" data-src="images/lucy/lucy4.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/lucy/lucy4.jpg">
 				<h4>Lucy</h4>
 				</a>
 				<p>Graphic Design</p>
@@ -211,7 +211,7 @@
 
 			<div class="project" id="project10">
 				<a href="tangle.html">
-				<img src="img/loading.gif" data-src="images/tangle/cover.jpg">
+				<img class="lazy-loading" src="images/loading.gif" data-src="images/tangle/cover.jpg">
 				<h4>Tangled Up In Yellow</h4>
 				</a>
 				<p>Graphic Design</p>
@@ -529,8 +529,36 @@
 
 
 
-<script src="javascript/button.js"></script>
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === 'images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
 <script src="javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
+
+
 
 
 

@@ -105,7 +105,7 @@
 
 				<div class="section">
 					<div>
-						<img src="../images/kganyc/1.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/1.png">
 					</div>
 				</div>
 				
@@ -130,7 +130,7 @@
 						<p>
 							KGA 网站的主要目标群体分为两类。一是投资者，他们正在寻求专业的，性价比高的的建筑公司为他们投资的项目做设计；二是新锐设计师，他们正在寻求发展空间大的建筑公司。
 						</p>
-						<img src="../images/kganyc/2.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/2.png">
 						
 						<h3>
 							痛点：
@@ -215,7 +215,7 @@
 						<p>
 							在竞品分析中，我们选择了五家建筑设计公司的网站作为竞品，分别分析他们的网站结构、风格、色彩、页面设计等。
 						</p>
-						<img src="../images/kganyc/3.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/3.png">
 						<p>
 							<ul>
 								<li>
@@ -247,7 +247,7 @@
 						<p>
 							在定义了我们的挑战与目标后，根据竞品分析和KGA的需求，我们做了多方案设计。
 						</p>
-						<img src="../images/kganyc/process.gif">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/process.gif">
 						<p>
 							最后，我们决定了最终的网站的架构、原型。
 						</p>
@@ -255,12 +255,12 @@
 						<p>
 							网站主要页面有“主页”、“项目列表页”、“洞察页面”、“关于页面”、“新闻页”和“语言转换”。
 						</p>
-						<img src="../images/kganyc/4.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/4.png">
 					
 						<!-- <h3>
 							Wireframes
 						</h3> -->
-						<img src="../images/kganyc/5.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/5.png">
 					</div>
 				</div>
 
@@ -280,10 +280,10 @@
 						<h2>
 							Final Website Visual Design
 						</h2>
-						<img src="../images/kganyc/6.png">
-						<img src="../images/kganyc/7.png">
-						<img src="../images/kganyc/8.png">
-						<img src="../images/kganyc/9.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/6.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/7.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/8.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/9.png">
 					</div>
 				</div>
 
@@ -295,8 +295,8 @@
 						<h2>
 							Final Mobile Visual Design
 						</h2>
-						<img src="../images/kganyc/10.png">
-						<img src="../images/kganyc/11.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/10.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/11.png">
 					</div>
 				</div>
 
@@ -308,11 +308,11 @@
 						<h2>
 							Analytics
 						</h2>
-						<img src="../images/kganyc/12.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/12.png">
 						<p>
 							数据显示，在2021年KGA网站浏览者到达4k+，从1月至12月波动上升，其中2月份浏览量最低，4月与12月浏览量最高。绝大多数用户使用电脑浏览网站。
 						</p>
-						<img src="../images/kganyc/13.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/13.png">
 						<p>
 							浏览用户广度也大大增加，4k+的浏览者中，将近1k的浏览者来自美国以外的地方，其中新加坡226人次，加拿大169人次，中国132人次。
 						</p>
@@ -329,7 +329,7 @@
 						<p>
 							来自Junior Partner，Patrick的推荐信
 						</p>
-						<img src="../images/kganyc/14.png">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/kganyc/14.png">
 						
 					</div>
 				</div>
@@ -386,3 +386,47 @@
 
 
 </script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === '../images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="../javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
+
+
+
+
+
+
+
+

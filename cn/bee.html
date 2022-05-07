@@ -103,7 +103,7 @@
 
 				<div class="section">
 					<div>
-						<img src="../images/beeanimation/logo.gif">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/beeanimation/logo.gif">
 					</div>
 				</div>
 					
@@ -116,7 +116,7 @@
 
 				<div class="section">
 					<div>
-						<img  src="../images/beeanimation/cards.jpg">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/beeanimation/cards.jpg">
 					</div>
 				</div>
 					
@@ -125,7 +125,7 @@
 					<h2>Website</h2>
 					<p>个人网站</p>
 					<div>
-						<img  src="../images/beeanimation/devices.jpg">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/beeanimation/devices.jpg">
 					</div>
 				</div>
 					
@@ -134,7 +134,7 @@
 					<h2>Display</h2>
 					<p>相关应用</p>
 					<div>
-						<img src="../images/beeanimation/set1.jpg">
+						<img class="lazy-loading" src="images/loading.gif" data-src="../images/beeanimation/set1.jpg">
 					</div>
 				</div>
 					
@@ -175,3 +175,45 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === '../images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="../javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
+
+
+
+
+
+
+
+

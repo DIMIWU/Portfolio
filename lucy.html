@@ -105,7 +105,7 @@
 					<p>
 						According to the story line, I designed four different fonts for the posters.
 					</p>
-					<img src="images/lucy/3.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="images/lucy/3.jpg">
 				</div>
 
 				<div class="section">
@@ -113,8 +113,8 @@
 					<p>
 						
 					</p>
-					<img src="images/lucy/1.jpg">
-					<img src="images/lucy/2.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="images/lucy/1.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="images/lucy/2.jpg">
 				</div>
 
 				
@@ -153,3 +153,48 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === 'images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
+
+
+
+
+
+
+
+
+

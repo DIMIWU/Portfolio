@@ -104,14 +104,14 @@
 
 				<div class="section">
 					<h2>Display</h2>					
-					<img src="../images/icon/icon.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="../images/icon/icon.jpg">
 				</div>
 
 
 				<div class="section">
 					<h2>Cover Design</h2>
 					<p>照片是我在2017年的摄影作品，“ICON”杂志名结合大厦照片做了分割设计。</p>
-					<img src="../images/icon/1.jpg" style="margin-left: auto;margin-right: auto; max-width:630px;myimg:expression_r(onload=function(){this.style.width=(this.offsetWidth > 630)?"630px":"auto"});">
+					<img class="lazy-loading" src="images/loading.gif" data-src="../images/icon/1.jpg" style="margin-left: auto;margin-right: auto; max-width:630px;myimg:expression_r(onload=function(){this.style.width=(this.offsetWidth > 630)?"630px":"auto"});">
 				</div>
 
 				<div class="section">
@@ -119,11 +119,11 @@
 					<p>
 					文章的标题和文章首字母结合城市天际线做了独特的设计，颜色选取了符合照片色调的深蓝色。
 					</p>
-					<img src="../images/icon/2.jpg">
+					<img class="lazy-loading" src="images/loading.gif" data-src="../images/icon/2.jpg">
 					<p>
 					文章首字母结合照片中的建筑设计了独特的“D”，颜色选取了符合照片色调的深棕色。
 					</p>
-					<img src="../images/icon/3.jpg">
+					<<img class="lazy-loading" src="images/loading.gif" data-src="../images/icon/3.jpg">
 				</div>
 				
 			</div>
@@ -155,3 +155,37 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+    const imgs = document.getElementsByTagName("img")
+    let n = 0
+    const imgLazyLoading = () => {
+      const seeHeight = window.innerHeight
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      for (let i=n; i< imgs.length; i++) {
+        if (imgs[i].offsetTop < seeHeight + scrollTop) {
+          if (imgs[i].getAttribute('src') === '../images/loading.gif') {
+            imgs[i].src = imgs[i].getAttribute('data-src')
+          }
+          n = i + 1
+        }
+      }
+    }
+    imgLazyLoading()
+    window.addEventListener("scroll", imgLazyLoading)
+  }
+</script>
+
+<script src="../javascript/compress.js"></script>
+<script>
+window.onload = function () {
+ imageLazyLoading()
+}
+</script>
