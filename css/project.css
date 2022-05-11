@@ -175,7 +175,14 @@ li {
 }
 	
 	
-
+.interview { 
+	grid-area: interview; 
+	display: grid;
+  	grid-template-areas:
+    'interview1 interview2';
+}
+.interview1 { grid-area: interview1; }
+.interview2 { grid-area: interview2; }
 
 
 
